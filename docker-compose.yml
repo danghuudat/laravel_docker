@@ -30,8 +30,8 @@ services:
     build:
       context: ./php-fpm
       args:
-        - LARADOCK_PHP_VERSION=8.0.1
-    image: backend-php-fpm-8.0
+        - LARADOCK_PHP_VERSION=8.0.2
+    image: backend-php-fpm-8.0.2
     container_name: php-fpm-8.0
 
   php-fpm-8.1:
