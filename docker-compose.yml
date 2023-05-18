@@ -44,8 +44,6 @@ services:
         - LARADOCK_PHP_VERSION=8.1.0
     image: backend-php-fpm-8.1
     container_name: php-fpm-8.1
-    ports:
-      - '5173:5173'
 
   php-worker-7.4:
     extends:
