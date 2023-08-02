@@ -20,7 +20,6 @@ services:
       - "publisher.local:${HOST_BRIDGE_IP}"
       - "operation.local:${HOST_BRIDGE_IP}"
       - "ad-tag.local:${HOST_BRIDGE_IP}"
-      - "sonar.local:${HOST_BRIDGE_IP}"
     environment:
       - XDEBUG_CLIENT_HOST=host.docker.internal
       - XDEBUG_CLIENT_PORT=9003
@@ -40,6 +39,6 @@ services:
       - ./php-fpm/skin-tool/rsync_password.txt:/etc/coccoc/browser_skin_admin_tool/rsync_password.txt
       - ./php-fpm/skin-tool/clickhouse-user-browser_skin_admin-credentials.json:/etc/coccoc-clickhouse-labs/conf/clickhouse-user-browser_skin_admin-credentials.json
       - /tmp/skin-demo:/var/itim/skin-demo.coccoc.com/public/
+      - /tmp/docker-xdebug/:/tmp/docker-xdebug/
     cap_add:
       - SYS_ADMIN
-    

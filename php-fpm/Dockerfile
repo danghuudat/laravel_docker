@@ -86,13 +86,6 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs wget
 RUN npm install -g cross-env
 
-RUN wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.8.0.2856-linux.zip
-RUN unzip sonar-scanner-cli-4.8.0.2856-linux.zip
-RUN mv sonar-scanner-4.8.0.2856-linux /opt/sonar-scanner
-
-COPY sonar-scanner.properties /opt/sonar-scanner/conf/sonar-scanner.properties
-ENV PATH="$PATH:/opt/sonar-scanner/bin"
-
 # Configure non-root user.
 ARG PUID=1000
 ENV PUID ${PUID}
